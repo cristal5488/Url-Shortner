@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Longurl:</strong>
+  <%= @url_mapping.longurl %>
+</p>
+
+<p>
+  <strong>Shortened URL:</strong>
+  <%="#{request.protocol}#{request.host}:#{request.port}/#{@url_mapping.id}" %>
+  </p>
+  <p><a href="<%= @url_mapping.longurl %>" >Click here to be redirected immediately</a></p>
+<%= link_to 'Edit', edit_url_mapping_path(@url_mapping) %> |
+<%= link_to 'Back', url_mappings_path %>
